@@ -1,4 +1,16 @@
 (function () {
+  const facebookRow = document.querySelector("[data-facebook-url]");
+  if (facebookRow) {
+    const facebookUrl = (facebookRow.getAttribute("data-facebook-url") || "").trim();
+    if (facebookUrl) {
+      const facebookLink = facebookRow.querySelector("a");
+      if (facebookLink) {
+        facebookLink.href = facebookUrl;
+        facebookRow.hidden = false;
+      }
+    }
+  }
+
   const filterButtons = [...document.querySelectorAll("[data-filter]")];
   const shots = [...document.querySelectorAll(".shot")];
   const status = document.getElementById("gallery-status");
