@@ -1,0 +1,14 @@
+{
+  "name": "motion-carpenters",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static showcase site for Motion Carpenters. Ship files live in public/.",
+  "scripts": {
+    "dev": "serve public -l 4173 -n",
+    "optimize": "node scripts/optimize.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5",
+    "sharp": "^0.34.4"
+  }
+}
